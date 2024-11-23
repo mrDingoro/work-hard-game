@@ -1,0 +1,141 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #000000;
+}
+body:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.inteface {
+  position: absolute;
+  bottom: -2px;
+  left: -2px;
+  width: 350px;
+  height: 100px;
+  border: 5px outset #8b8b8b;
+  z-index: 2;
+  display: flex;
+  border-radius: 5px;
+  background: #797979;
+  gap: 10px;
+}
+
+.playerIcon {
+  width: 110px;
+  background-image: url('/src/assets/PC Computer - Warcraft 2 - Icons.png');
+  background-size: 1198px;
+  background-repeat: no-repeat;
+  background-position: -251px -15px;
+  border: 2px inset #000000;
+}
+
+.playerInfo {
+  font-size: 14px;
+  color: white;
+  display: grid;
+  align-items: stretch;
+  justify-items: stretch;
+  justify-content: center;
+  align-content: stretch;
+}
+
+.hp {
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 0px 6px;
+  background: #006401;
+  color: white;
+  font-weight: bold;
+}
+.exp {
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 0px 6px;
+  background: #6d6d59;
+  color: white;
+  font-weight: bold;
+}
+
+.attack, .attackRange {
+  font-weight: bold;
+}
+
+
+.canvas-wrap {
+  width: 1400px;
+  height: 750px;
+  position: relative;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'JetBrains Mono';
+  font-size: 38px;
+}
+
+.canvas-wrap canvas {
+  position: absolute;
+  border-radius: 5px;
+  border: 5px double #5b5b5b;
+  z-index: 1;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
